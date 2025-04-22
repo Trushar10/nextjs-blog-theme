@@ -8,9 +8,12 @@ export default function Header({ name }) {
         alt="Logo"
         className="block w-[100px] h-[100px] mx-auto mb-4 rounded-full"
       />
-      <p className="text-2xl text-center dark:text-white">
+      <h1 className="text-5xl text-center dark:text-white">
         <Link href="/">{name}</Link>
-      </p>
+      </>
+      <h2 className="mb-12 text-2xl text-center lg:text-5xl">
+          {globalData.blogTitle}
+        </h2>
     </header>
   );
 }
