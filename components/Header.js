@@ -12,9 +12,6 @@ export default function Header({ name, globalData }) {
       <h1 className="text-5xl text-center dark:text-white">
         <Link href="/">{name}</Link>
       </h1>
-      <h2 className="mb-12 text-2xl text-center lg:text-5xl">
-        {globalData.blogTitle}
-      </h2>
     </header>
   );
 }
