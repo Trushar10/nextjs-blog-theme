@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { getGlobalData } from '../utils/global-data';
 
-export default function Header({ name }) {
+export default function Header({ name, globalData }) {
   return (
     <header className="pt-20 pb-12">
       <img
