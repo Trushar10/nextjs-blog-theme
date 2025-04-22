@@ -51,3 +51,14 @@ exports.FONT_THEMES = {
   serif: `ui-serif, Georgia, Cambria, "Times New Roman", Times, serif`,
   monospace: `ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace`,
 };
+
+export default {
+  sidebarButtons: [
+    {
+      label: 'Site management',
+      type: 'model',
+      icon: 'tools',
+      modelName: 'SiteConfig',
+    },
+  ],
+};
