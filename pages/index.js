@@ -26,14 +26,16 @@ export default function Index({ posts, globalData }) {
                 as={`/posts/${post.filePath.replace(/\.mdx?$/, '')}`}
                 href={`/posts/[slug]`}
                 className="block px-6 py-6 lg:py-10 lg:px-16 focus:outline-hidden focus:ring-4 focus:ring-primary/50"
+                data-sb-object-id={`posts/${post.filePath}`}
               >
                 <div className="flex items-start gap-4">
-                  {/* Square image on the left */}
+                  {/* Square image on the left, editable in Netlify Visual Editor */}
                   <img
                     src={post.data.image || '/images/random-image.jpeg'}
                     alt={post.data.title}
                     className="object-cover rounded-md flex-shrink-0"
                     style={{ width: '200px', height: '200px' }}
+                    data-sb-field-path="image"
                   />
                   <div className="flex-1">
                     {post.data.date && (
