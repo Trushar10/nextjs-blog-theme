@@ -27,26 +27,39 @@ export default function Index({ posts, globalData }) {
                 href={`/posts/[slug]`}
                 className="block px-6 py-6 lg:py-10 lg:px-16 focus:outline-hidden focus:ring-4 focus:ring-primary/50"
               >
-                {post.data.date && (
-                  <p
-                    className="mb-3 font-bold uppercase opacity-60"
-                    data-sb-field-path="date"
-                  >
-                    {post.data.date}
-                  </p>
-                )}
-                <h2 className="text-2xl md:text-3xl" data-sb-field-path="title">
-                  {post.data.title}
-                </h2>
-                {post.data.description && (
-                  <p
-                    className="mt-3 text-lg opacity-60"
-                    data-sb-field-path="description"
-                  >
-                    {post.data.description}
-                  </p>
-                )}
-                <ArrowIcon className="mt-4" />
+                <div className="flex items-start gap-4">
+                  {/* Square image on the left */}
+                  <img
+                    src={post.data.image || '/images/random-image.jpeg'}
+                    alt={post.data.title}
+                    className="w-14 h-14 object-cover rounded-md flex-shrink-0"
+                  />
+                  <div className="flex-1">
+                    {post.data.date && (
+                      <p
+                        className="mb-3 font-bold uppercase opacity-60"
+                        data-sb-field-path="date"
+                      >
+                        {post.data.date}
+                      </p>
+                    )}
+                    <h2
+                      className="text-2xl md:text-3xl"
+                      data-sb-field-path="title"
+                    >
+                      {post.data.title}
+                    </h2>
+                    {post.data.description && (
+                      <p
+                        className="mt-3 text-lg opacity-60"
+                        data-sb-field-path="description"
+                      >
+                        {post.data.description}
+                      </p>
+                    )}
+                    <ArrowIcon className="mt-4" />
+                  </div>
+                </div>
               </Link>
             </li>
           ))}
