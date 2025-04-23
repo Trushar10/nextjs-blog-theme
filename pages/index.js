@@ -32,7 +32,8 @@ export default function Index({ posts, globalData }) {
                   <img
                     src={post.data.image || '/images/random-image.jpeg'}
                     alt={post.data.title}
-                    className="w-14 h-14 object-cover rounded-md flex-shrink-0"
+                    className="object-cover rounded-md flex-shrink-0"
+                    style={{ width: '200px', height: '200px' }}
                   />
                   <div className="flex-1">
                     {post.data.date && (
