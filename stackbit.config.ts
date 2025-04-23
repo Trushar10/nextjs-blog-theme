@@ -20,6 +20,14 @@ export default defineStackbitConfig({
                         { name: "title", type: "string", required: true, default: 'Post Title' }, 
                         { name: "description", type: "string", default: 'Post description goes here' },
                         { name: "date", type: "date", required: true },
+                        // Add image field for dynamic image selection
+                        { 
+                            name: "image", 
+                            type: "image", 
+                            label: "Post Image", 
+                            required: false, 
+                            default: "/images/random-image.jpeg"
+                        },
                     ]
                   }
             ],
